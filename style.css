@@ -1,0 +1,621 @@
+body
+	{
+		background-color	: white;
+	}
+
+.add
+	{
+		background-color	: orange;
+	}
+
+	
+.atas
+	{
+		background-color:white;
+		height: 20px;
+		font-family: Tahoma;
+		text-align:right;
+	
+	}
+.atas a
+	{
+		color: black;
+		padding: 20px 15px 2px 15px;
+		text-decoration: none;
+		font-weight: bold;
+		font-size:11px;
+	 }
+.atas a:hover
+	 {
+		color: brown;
+		border-bottom: solid 4px #ffffff;
+	 }
+#menu li ul 
+	{
+		display:none;
+		position:absolute;
+	}
+#menu li:hover > ul 
+	{
+	  display:block;
+	}
+#menu ul
+	{
+	margin:0;
+	padding:0;
+	line-height:35px;
+	}
+#menu li
+	{
+	float:left;
+	list-style:none;
+	position:relative;
+	text-align:center;
+	width:170px;
+	background-color:blue;
+	}
+
+#menu li ul ul 
+	{
+	  left:100%;
+	  top:0px;
+	}
+#menu li li
+	{
+	float:none;
+	background-color:blue;
+	}
+#menu li li li
+	{
+	background-color:#005500;
+	}
+#menu li li li li
+	{
+	background-color:#003300;
+	}
+#menu li a
+	{
+	color:#ffffff;
+	text-decoration:none;
+	text-align:center;
+	display:block;
+	}
+#menu li a:hover
+	{
+	background-color:green;
+	text-decoration:none;
+	color:#FFFF00;
+	} 
+	
+.wrap
+	{
+		margin: 15px 0 50px 0;
+	}
+
+form 
+    {
+        width:500px;
+        margin:50px auto;
+    }
+
+.search 
+    {
+        padding:6px 150px;
+        background: #f0f8ff;
+        border:2px solid #008080;
+    }
+.buttons
+	{
+        position:relative;
+        left:-4px;
+        padding:8px 15px;
+        border:0px solid #008080;
+        background-color: #6B8E23;
+        color:#fafafa;
+        font-weight:bold;
+    }
+.buttons:hover 
+	{
+         background: #008080;
+         color:#fafafa;
+    }
+.buttons:active 
+	{
+         background:#9ACD32;
+    }
+
+.btn
+	{
+        position:relative;
+        left:-4px;
+        padding:8px 15px;
+        border:0px solid #008080;
+        background-color: red;
+        color:#fafafa;
+        font-weight:bold;
+    }
+.btn:hover 
+	{
+         background: #008080;
+         color:#fafafa;
+    }
+.btn:active 
+	{
+         background:#9ACD32;
+    }
+
+.border
+{
+     float: left;
+     width: 200px;
+     height: 200px;
+     margin-top: 10px;
+     margin-left: 10px;
+     border:solid 1px #a0a0a4;
+     background-color: #f1db8d;
+	 text-align:center;
+}
+
+.back
+	{
+		background-color:greenyellow;
+	}
+
+.background
+	{
+		background-color:greenyellow;
+		margin-top: 10px;
+		margin-bottom: 10px
+	}
+
+.wrapping
+	{
+		margin: 50px 0 50px 0;
+
+	}
+
+#edit
+	{
+		border:1px solid white;
+		padding:10px 10px;
+		margin:0 20px 0 20px;
+	}
+.paket
+	{
+		
+		background-color:grey;
+		height: 30px;
+		font-family: Times new roman;
+		text-align:center;
+	}
+
+.paketket a
+	{
+		color:black;
+		text-decoration:none;
+		font-family:arial;
+		font-size:13px;
+		
+	}
+
+.paketket a:hover
+	{
+		color: red;
+		
+	}
+
+.footer
+	{
+		background-color: black;
+		height: 20px;
+		font-family: Times new roman;
+		text-align: center;
+		font-size: 14px;
+		margin-top: 5px;
+		color: white;
+	}
+
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+ul,ol {
+	list-style-type: none;
+}
+/* end css reset */
+
+.container {	/* posisikan letak slidernya */
+	margin:10% auto;
+	position: relative;
+	overflow: hidden;
+}
+.container, ul.slide li img{
+	width:1325px; /* Sesuaikan sendiri */
+	height: 400px;  /* Sesuaikan sendiri */
+}
+
+
+ul.slide {
+	position: absolute;
+	display: block;
+	width:300%;  /* <-- Angka 3 Bergantung pada jumlah slide */
+}
+
+.caption {	/* styling untuk deskripsi setiap slide */
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	bottom:0;
+	padding:10px;
+	color:#fff;
+	left: 0;
+	right: 0;
+}
+
+/* Yang membuatnya jadi slider */
+	ul.slide li {
+  		display: inline-block;
+  		float: left;
+  		-webkit-box-sizing:border-box;
+  		-moz-box-sizing:border-box;
+  		ox-sizing:border-box;
+  		-webkit-transition: -webkit-transform 2000ms;
+  		-moz-transition: -moz-transform 2000ms;
+  		transition: -webkit-transform 2000ms, transform 2000ms;
+	}
+	ul.slide li.slide-1 {
+		left: 0%;
+	}
+	ul.slide li.slide-2 {
+		left: 100%;
+	}
+	ul.slide li.slide-3 {
+		left: 200%;
+	}
+	#nav-1:checked ~ ul.slide li{
+	  	-webkit-transform: translateX(0%);
+		-moz-transform: translateX(0%);
+	  	transform: translateX(0%);
+	}
+	#nav-2:checked ~ ul.slide li{
+	  	-webkit-transform: translateX(-100%);
+	  	-moz-transform: translateX(-100%);
+	 	transform: translateX(-100%);
+	}
+	#nav-3:checked ~ ul.slide li {
+	  	-webkit-transform: translateX(-200%);
+	  	-moz-transform: translateX(-200%);
+	  	transform: translateX(-200%);
+	}
+/* End, yang membuatnya jadi slider */
+
+
+/* Navigator */
+
+.radio-nav { /* menghilangkan radio button */
+	display: none;
+}
+	
+	/* styling untuk tombol next dan previous slide */
+	.nav-arrow {
+		position: absolute;
+		top:45%;
+		width:50px;
+		height: 50px;
+	}
+	.nav-next {
+		right:10px;
+	}
+	.nav-prev {
+		left:10px;
+	}
+	.nav-arrow label {
+		-webkit-transition:all 0.3s;
+		-moz-transition:all 0.3s;
+		transition:all 0.3s;
+		background-color: rgba(0,0,0,0.3);
+		color: #fff;
+		border-radius: 50%;
+		display: block;
+		position: absolute;
+		padding:15px 20px;
+		cursor: pointer;
+		z-index: 1;
+		opacity: 0;
+		font-weight: bold;
+		line-height: 1;
+	}
+	.container:hover .nav-arrow label{
+		background-color: rgba(0,0,0,0.7);
+	}
+	/* end styling untuk tombol next dan previous slide */
+	/*Setiap slide mempunya tombol prev dan next-nya masing-masing. Nah, tampilkan tombol yang tepat dengan kode dibawah ini*/ 
+	#nav-1:checked ~ .nav-prev label.nav-3,
+	#nav-1:checked ~ .nav-next label.nav-2,
+	#nav-2:checked ~ .nav-prev label.nav-1,
+	#nav-2:checked ~ .nav-next label.nav-3,
+	#nav-3:checked ~ .nav-prev label.nav-2,
+	#nav-3:checked ~ .nav-next label.nav-1 {
+		z-index: 2;
+		opacity: 1;
+	}
+	
+/*form login*/
+
+#log{
+    max-width: 340px;
+    margin:100px auto;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px #aaa;
+}
+#log h3{
+    text-align: center;
+    padding: 25px 10px;
+    background-color: #2b2f3e;
+    color: #b0b0bc;
+}
+fieldset{
+    margin: 0;
+    border: none;
+}
+.frm{
+    padding: 0;
+    margin: 0;
+    padding: 15px;
+}
+.inpt[type='text'],
+.inpt[type="email"]{
+    width: 60%;
+    padding: 1em;
+    margin-top: 1.2em;
+    color: #888;
+}
+.inpt[type="submit"]{
+    width: 60%;
+    padding: 1.4em;
+    margin: 1.5em 0;
+    color: #888;
+    background-color:#00cdb1 ;
+    border:none;
+    color:#eee;
+    border-bottom: 4px solid transparent;
+}
+.inpt[type="submit"]:hover{
+    opacity: 0.8;
+    border-color: #00adb1;
+}
+.frm p{
+    text-align: center;
+    color: #888;
+    width: 10px;
+    margin: 10px auto 0;
+    background: #f9f9f9;
+    position: relative;
+    bottom: 20px;
+}
+.border-p{
+    border-top: 1px solid #888;
+    margin: 10px 10px;
+}
+button{
+    background-color: #3b5998;
+    width: 60%;
+    padding: 1.4em;
+    margin-bottom: 1em;
+    color: #888; ;
+    border:none;
+    color:#eee;
+    border-bottom: 4px solid transparent;
+}
+button:hover{
+    opacity: 0.9;
+    border-color: #3b3998;
+}
+
+/*form help*/
+.word
+	{
+		background-color: red;
+		font-size: 50px;
+		font-family: Calibri;
+		text-align: center;
+		color: white;
+	}
+#helpp {
+    width:500px;
+    margin:50px auto;
+
+}
+.key{
+    padding:8px 15px;
+    background:rgba(50, 50, 50, 0.2);
+    border:0px solid #dbdbdb;
+}
+.cr {
+    position:relative;
+    padding:6px 15px;
+    left:-8px;
+    border:2px solid #53bd84;
+    background-color:#53bd84;
+    color:#fafafa;
+}
+.cr:hover  {
+    background-color:#fafafa;
+    color:#207cca;
+}
+#helppp
+	{
+		
+		border:1px solid white;
+		padding:10px 10px;
+		margin:0 20px 0 20px;
+		
+	}
+	
+/*form daftar*/
+
+#lag{
+    max-width: 340px;
+    margin:100px auto;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px #aaa;
+}
+#lag h3{
+    text-align: center;
+    padding: 25px 10px;
+    background-color: #2b2f3e;
+    color: #b0b0bc;
+}
+#a{
+    margin: 0;
+    border: none;
+}
+.from{
+    padding: 0;
+    margin: 0;
+    padding: 15px;
+}
+.in[type='text'],
+.in[type="email"]{
+    width: 60%;
+    padding: 1em;
+    margin-top: 1.2em;
+    color: #888;
+}
+.in[type="submit"]{
+    width: 60%;
+    padding: 1.4em;
+    margin: 1.5em 0;
+    color: #888;
+    background-color:#00cdb1 ;
+    border:none;
+    color:#eee;
+    border-bottom: 4px solid transparent;
+}
+.in[type="submit"]:hover{
+    opacity: 0.8;
+    border-color: #00adb1;
+}
+.from p{
+    text-align: center;
+    color: #888;
+    width: 10px;
+    margin: 10px auto 0;
+    background: #f9f9f9;
+    position: relative;
+    bottom: 20px;
+}
+.bdrs-n{
+    border-top: 0px solid #888;
+    margin: 10px 10px;
+}
+#gender
+	{
+		border: 1px solid blue;
+		padding: 10px 5px 10px 5px;
+		width: 50%;
+	}
+	
+
+/*pria*/
+
+#gambar {
+	
+     float: left;
+     width: 200px;
+     height: 200px;
+     margin-top: 10px;
+     margin-left: 10px;
+     border:solid 1px #a0a0a4;
+   
+    overflow: hidden;
+    position: relative;
+    }
+.ket {
+		width: 100%;
+		height: auto;
+		text-align: left;
+		padding: 5px 10px;
+		background: #000;
+		opacity: 0.6;
+		color: #fff;
+		line-height: 18px;
+		font-size: 12px;
+		font-family: Arial, Helvetica, sans-serif; 
+		-webkit-border-radius: 0x 25px 0px 0px;
+		-moz-border-radius: 0px 25px 0px 0px;
+		-o-border-radius: 0px 25px 0px 0px;
+		border-radius: 0px 25px 0px 0px;
+ }
+#gambar .ket 
+	{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin-bottom: -300px;
+		-webkit-transition: all 1s ease-out;
+		-moz-transition: all 1s ease-out;
+		-o-transition: all 1s ease-out;
+		transition: all 1s ease-out;
+    }
+#gambar:hover 
+	{
+		-webkit-box-shadow:0px 0px 25px #000000;
+		-moz-box-shadow:0px 0px 25px #000000;
+		-o-box-shadow:0px 0px 25px #000000;
+		box-shadow:0px 0px 25px #000000;
+	}
+#gambar:hover .ket
+	{
+		margin-bottom: 0px;
+    }
+	
+.marquee
+	{
+		background-color: gold;
+		text-align: justify;
+	}
+	
+/*Produk Pria*/
+.a5
+	{
+		
+        padding:8px 15px;
+        border:0px solid #008080;
+        background-color: #6B8E23;
+        color:#fafafa;
+        font-weight:bold;
+		text-decoration:none;
+		text-align:center;
+    }
+.a5:hover 
+	{
+         background: #008080;
+         color:#fafafa;
+    }
+.a5:active 
+	{
+         background:#9ACD32;
+    }
+.detail
+	{
+		background-color: green;
+		color: white;
+		font-size:25px;
+		text-align: center;
+	}
+
+.zzz
+	{
+		background-color: white;
+		color: black;
+		font-size:18px;
+	}
+	
+.byr
+	{
+		color: green;
+		font-family:Times new roman;
+		font-size: 20px;
+		
+	}

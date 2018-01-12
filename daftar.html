@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>daftar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="new.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown("slow");
+    });
+});
+</script>
+ 
+<style> 
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: LightGray;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+</style>
+</head>
+<body>
+<div id="flip">SEBELUM MENGISI DAFTAR MOHON BACA PERATURANNYA
+			<p>KLIK DISNI...!!!</div>
+
+<div id="panel">1. Dilarang menyalah gunakan akun yang anda buat, semisal untuk tipu menipu dalam proses transaksi.
+			 <p>2. Seluruh informasi pribadi yang Anda berikan kepada Fashion ON hanya akan digunakan dan dilindungi oleh Fashion ON. Setiap informasi yang Anda berikan terbatas untuk tujuan proses yang berkaitan dengan Fashion ON dan tanpa tujuan lainnya.
+			 <p>3. Kami sangat memperhatikan betul keamanan dan privasi pelanggan kami, dan kami hanya akan mengumpulkan informasi pribadi Anda yang hanya kami perlukan untuk kepentingan internal kami saja. Perlindungan data dan informasi pelanggan merupakan privasi yang harus kami jaga penuh untuk menjaga kepercayaan Anda terhadap kami.
+			 <p>Terimakasih atas kerjasamanya
+			 <p>Selamat Berbelanja :)</div>
+
+</body>
+<body>
+     <div id="lag">
+        <h3> Please..Regist for Fashion ON</h3>
+        <fieldset id="a">
+            <form action="" id="from">
+                <input type="text" class="in" name="username" placeholder="First Name">
+				<input type="text" class="in" name="username" placeholder="Last Name">
+				<input type="email" class="in" name="Email" placeholder="Email">
+				<input type="text" class="in" name="username" placeholder="Password"><br><br>
+				<div id="gender">
+                <input type="radio" name="gender" value="0">male<br>
+				<input type="radio" name="gender" value="1">female<br>
+				</div>
+                <input type="submit" class="in" name="submit" value="Regist">
+                <div class="bdrs-n"></div>
+           
+            </form>
+        </fieldset>
+    </div>
+</body>
+</html>
